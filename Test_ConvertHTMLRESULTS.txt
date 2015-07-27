@@ -1,0 +1,9 @@
+
+     INPUT:&quot;Hello & There!&quot;:
+     BENCH:"Hello & There!":
+ OK :RTURN:"Hello & There!":
+
+     INPUT:Hello & There!:
+     BENCH:Hello & There!:
+ OK :RTURN:Hello & There!:
+     Last ConvertHTML record processed.

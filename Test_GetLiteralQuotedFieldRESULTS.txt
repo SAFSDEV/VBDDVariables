@@ -1,0 +1,18 @@
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Hello" ; "Every day I say; ""Hello.""":INDEX: 1
+     DELIM:;
+     FIELD: 2
+     BENCH:Every day I say; "Hello."
+ OK :RTURN:Every day I say; "Hello."
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:Ignore this: "Every day I say; ""Hello.""" :INDEX: 1
+     DELIM:;
+     FIELD: 1
+     BENCH:Every day I say; "Hello."
+ OK :RTURN:Every day I say; "Hello."
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:Ignore this: "Every day I say; ""Hello.""" ignore this:INDEX: 1
+     DELIM:!;#
+     FIELD: 1
+     BENCH:Every day I say; "Hello."
+ OK :RTURN:Every day I say; "Hello."

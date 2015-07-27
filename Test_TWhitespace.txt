@@ -1,0 +1,5 @@
+;=== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+  "two spaces removed at front AND back"  ,"two spaces removed at front AND back"
+"  two spaces ignored in quotes  ","  two spaces ignored in quotes  "
+  two spaces removed at front AND back  ,two spaces removed at front AND back
+ 	 	 spaces AND tabs removed	 	,spaces AND tabs removed

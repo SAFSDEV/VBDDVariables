@@ -1,0 +1,55 @@
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An Unquoted  semi  ;  at 20  :INDEX: 29
+     DELIM:;
+     BENCH:20
+ OK :RTURN:20
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An  quoted   semi ";" at 20  :INDEX: 29
+     DELIM:;
+     BENCH:-1
+ OK :RTURN:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An Unquoted  semi  ;  at 20  :INDEX: 29
+     DELIM::;^
+     BENCH:20
+ OK :RTURN:20
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An  quoted   semi ";" at 20  :INDEX: 29
+     DELIM:^:;
+     BENCH:-1
+ OK :RTURN:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An Unquoted  semi  ;  at 20  :INDEX: 29
+     DELIM:;!
+     BENCH:20
+ OK :RTURN:20
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An Unquoted  semi  ;  at 20  :INDEX: 29
+     DELIM:!;
+     BENCH:20
+ OK :RTURN:20
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An  quoted   semi ";" at 20  :INDEX: 29
+     DELIM:!;
+     BENCH:-1
+ OK :RTURN:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An  quoted   semi ";" at 20  :INDEX: 29
+     DELIM:;!
+     BENCH:-1
+ OK :RTURN:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An ; unquoted semi ;  at  20 :INDEX: 20
+     DELIM:!;
+     BENCH:20
+ OK :RTURN:20
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An ; unquoted semi ;  at  4  :INDEX: 19
+     DELIM:!;
+     BENCH:4
+ OK :RTURN:4
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:An ";" quoted semi ;  at  5  :INDEX: 19
+     DELIM:!;
+     BENCH:-1
+ OK :RTURN:-1

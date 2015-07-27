@@ -1,0 +1,108 @@
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" the first position is ALWAYS false:INDEX: 1
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:No quoted text should return False (0):INDEX: 37
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:quoted 5 should return True " 5 ":INDEX: 31
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:unquoted 5 should return False "" 5 "":INDEX: 35
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:1st quot should return Fals """ 5 """:INDEX: 29
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:2nd quot should return Fals """ 5 """:INDEX: 30
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:3rd quot should return Fals """ 5 """:INDEX: 31
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:post 3rd quot  returns Fals """ 5 """:INDEX: 32
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:quoted 5 should return True """ 5 """:INDEX: 33
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:4th quot should return True """ 5 """:INDEX: 35
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:5th quot should return True """ 5 """:INDEX: 36
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:6th quot should return Fals """ 5 """:INDEX: 37
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:7th quot should return True """ 5 """":INDEX: 38
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:post 6th should return Fals """ 5 """ :INDEX: 38
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:All of these should be false """"":INDEX: 29
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:All of these should be false """"":INDEX: 30
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:All of these should be false """"":INDEX: 31
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:All of these should be false """"":INDEX: 32
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:All of these should be false """"":INDEX: 33
+     BENCH:False:
+ OK :RTURN:False:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:The last space should be true """"" :INDEX: 36
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" all in quotes":INDEX: 2
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" all in quotes":INDEX: 8
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" all in quotes":INDEX: 9
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" all in quotes":INDEX: 10
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" all in quotes":INDEX: 16
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" all in quotes":INDEX: 29
+     BENCH:True:
+ OK :RTURN:True:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:" this "" is "" NOT in quotes":INDEX: 30
+     BENCH:False:
+ OK :RTURN:False:

@@ -1,0 +1,42 @@
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+" the first position is ALWAYS false, 1, 0
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+No quoted text should return False (0), 37 , 0
+quoted 5 should return True " 5 ", 31 , -1
+unquoted 5 should return False "" 5 "", 35 , 0
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+1st quot should return Fals """ 5 """, 29 , 0
+2nd quot should return Fals """ 5 """, 30 , 0
+3rd quot should return Fals """ 5 """, 31 , 0
+post 3rd quot  returns Fals """ 5 """, 32 , -1
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+quoted 5 should return True """ 5 """, 33 , -1
+4th quot should return True """ 5 """, 35 , -1
+5th quot should return True """ 5 """, 36 , -1
+6th quot should return Fals """ 5 """, 37 , 0
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+7th quot should return True """ 5 """", 38 , -1
+post 6th should return Fals """ 5 """ , 38 , 0
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+All of these should be false """"", 29, 0
+All of these should be false """"", 30, 0
+All of these should be false """"", 31, 0
+All of these should be false """"", 32, 0
+All of these should be false """"", 33, 0
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+The last space should be true """"" , 36, -1
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ==== ==== ==== ==== ==== ====
+" this "" is "" all in quotes", 2 , -1
+" this "" is "" all in quotes", 8 , -1
+" this "" is "" all in quotes", 9 , -1
+" this "" is "" all in quotes", 10 , -1
+" this "" is "" all in quotes", 16 , -1
+" this "" is "" all in quotes", 29, -1
+
+" this "" is "" NOT in quotes", 30 , 0

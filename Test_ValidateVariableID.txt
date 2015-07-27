@@ -1,0 +1,11 @@
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+ ^AValidVariableName       ,AValidVariableName
+^AnotherValidName          ,AnotherValidName
+MissingCaretInvalid        ,
+^Embedded^CaretInvalid     ,
+^numbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOK            ,numbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOK
+^AnXYZVariable.XYZxyz      ,AnXYZVariable.XYZxyz
+^AnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyz      ,AnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyz
+^AlongWithAn_Underscore    ,AlongWithAn_Underscore
+"^ThisIsNotValid	"  ,
+^And Neither Is This	   ,

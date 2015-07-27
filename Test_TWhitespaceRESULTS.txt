@@ -1,0 +1,16 @@
+
+     INPUT:  "two spaces removed at front AND back"  :
+     BENCH:"two spaces removed at front AND back":
+ OK :RTURN:"two spaces removed at front AND back":
+
+     INPUT:"  two spaces ignored in quotes  ":
+     BENCH:"  two spaces ignored in quotes  ":
+ OK :RTURN:"  two spaces ignored in quotes  ":
+
+     INPUT:  two spaces removed at front AND back  :
+     BENCH:two spaces removed at front AND back:
+ OK :RTURN:two spaces removed at front AND back:
+
+     INPUT: 	 	 spaces AND tabs removed	 	:
+     BENCH:spaces AND tabs removed:
+ OK :RTURN:spaces AND tabs removed:

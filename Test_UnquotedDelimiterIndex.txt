@@ -1,0 +1,27 @@
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+An Unquoted  semi  ;  at 20  ,;, 1 , 20
+An  quoted   semi ";" at 20  ,;, 1 , -1
+An Unquoted  semi  ;  at 20  ,:;^, 1 , 20
+An  quoted   semi ";" at 20  ,^:;, 1 , -1
+An Unquoted  semi  ;  at 20  ,;!, 1 , 20
+An Unquoted  semi  ;  at 20  ,!;, 1 , 20
+An Unquoted  semi  ;  at 20  ,!;, 0 , 20
+
+An  quoted   semi ";" at 20  ,!;, 1 , -1
+An  quoted   semi ";" at 20  ,;!, 1 , -1
+An  quoted   semi ";" at 20  ,;!, 0 , -1
+An Unquoted  semi  ;  at 20  ,!;, 31 , -1
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+An ; unquoted semi ;  at  4  ,!;, 4 , 4
+An ; unquoted semi ;  at  20 ,!;, 5 , 20
+An ;  quoted semi ";" at  20 ,!;, 5 , -1
+
+;missing text
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+,!;, 1 , -1
+
+;missing delimiter
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+An ; unquoted semi ;  at  4  ,, 4 , -1
+

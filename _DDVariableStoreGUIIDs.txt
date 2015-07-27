@@ -1,0 +1,43 @@
+
+http://www.codeproject.com/Tips/267554/Using-32-bit-COM-Object-from-64-bit-Application
+
+I have an application that I wanted to be 64-bit for some work being done for a third party DLL, but I have a 32-bit DLL that I need to use in the same application.
+
+By modifying the Registry, you can allow a 64-bit app to use a 32-bit COM object.
+
+    Locate your COM object GUID under HKey_Classes_Root/Wow6432Node/CLSID.
+    Once located, add a new REG_SZ (string) value. The name should be AppID and the data should be the same COM object GUID you have just searched for.
+    Add a new key under HKey_Classes_Root/Wow6432Node/AppID. The new key should be called the same as the COM object GUID.
+    Under the new key you just added, add a new REG_SZ (string) value, and call it DllSurrogate. Leave the value empty.
+    Create a new key under HKey_Local_Machine/Software/Classes/AppID, if it doesn't already exist. Again, the new key should be called the same as the COM object's GUID. No values are necessary to be added under this key.
+
+For the DLL?
+HKEY_CLASSES_ROOT\TypeLib\{8397432C-2AD6-4733-AE5B-F42CA3181F75}
+
+DDVariableStore.DDVariable
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{9C196EF2-A1F4-4D87-85F9-58640FE4FFA1}
+
+DDVariableStore.DDVariables
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{AD514E88-9335-4CE6-80A6-10CF68CCD0AA}
+
+DDVariableStore.GlobalMappings
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{FB28CA24-00F0-46F7-AB4B-6F2C56195C16}
+
+DDVariableStore.GlobalVariables
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{DA5F9478-AA35-4DFA-A65C-758FCDA49003}
+
+DDVariableStore.SAFSMonitor
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{981F0562-56C8-4FCD-B4B7-E00FE8709615}
+
+DDVariableStore.STAFResult
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{D34F8A47-ECDA-462E-AC8B-C71EA1698297}
+
+DDVariableStore.STAFUtilities
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{DBA3C1A7-EEC5-47A1-B0E2-913B611786FF}
+
+DDVariableStore.StringUtilities
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{FEE2BE7B-95D0-4FDA-8C68-FB3563D693F7}
+
+DDVariableStore.TestRecordData
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{604AF689-178A-4C9C-B250-C86549DE41E9}
+

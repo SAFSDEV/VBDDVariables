@@ -1,0 +1,12 @@
+DDVariables = 11, 1, 742, 322, 
+DDVariable = -1, 390, 722, 662, 
+GlobalVariables = 24, 114, 722, 552, 
+SharedModule = 24, 41, 758, 476, 
+GlobalMappings = 1, 0, 712, 472, 
+StringUtilities = 0, 3, 710, 478, 
+STAFModule = 5, 0, 725, 340, 
+STAFConstants = 4, 95, 689, 599, 
+SAFSMonitor = -3, 12, 723, 623, C
+STAFResult = 1, -3, 723, 388, C
+STAFUtilities = 2, 140, 725, 526, 
+TestRecordData = 132, 132, 625, 580, 

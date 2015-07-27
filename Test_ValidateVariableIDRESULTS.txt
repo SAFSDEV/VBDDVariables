@@ -1,0 +1,44 @@
+Begin Time: 61153.85
+
+     INPUT: ^AValidVariableName       :
+     BENCH:AValidVariableName:
+ OK :RTURN:AValidVariableName:
+
+     INPUT:^AnotherValidName          :
+     BENCH:AnotherValidName:
+ OK :RTURN:AnotherValidName:
+
+     INPUT:MissingCaretInvalid        :
+     BENCH::
+ OK :RTURN::
+
+     INPUT:^Embedded^CaretInvalid     :
+     BENCH::
+ OK :RTURN::
+
+     INPUT:^numbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOK            :
+     BENCH:numbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOK:
+ OK :RTURN:numbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOKnumbers10areOK:
+
+     INPUT:^AnXYZVariable.XYZxyz      :
+     BENCH:AnXYZVariable.XYZxyz:
+ OK :RTURN:AnXYZVariable.XYZxyz:
+
+     INPUT:^AnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyz      :
+     BENCH:AnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyz:
+ OK :RTURN:AnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyzAnXYZVariable.XYZxyz:
+
+     INPUT:^AlongWithAn_Underscore    :
+     BENCH:AlongWithAn_Underscore:
+ OK :RTURN:AlongWithAn_Underscore:
+
+     INPUT:"^ThisIsNotValid	"  :
+     BENCH::
+ OK :RTURN::
+
+     INPUT:^And Neither Is This	   :
+     BENCH::
+ OK :RTURN::
+End Time: 61153.85
+
+Elapsed Time: 0

@@ -1,0 +1,8 @@
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:Ignore "First field" then followed by "second ""field""":INDEX: 1
+     BENCH:First field:
+ OK :RTURN:First field:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:Ignore "First field" then followed by "second ""field""":INDEX: 2
+     BENCH:second "field":
+ OK :RTURN:second "field":

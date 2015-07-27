@@ -1,0 +1,141 @@
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+2 + 2,,4,0
+-2-2,,-4,0
+
+;test precedence
+2+2*3-2&2,,62,0
+2+2*3-2+11%3&2,,42,0
+2+((2*3)-2)+(11%3)&2,,82, 0
+"2"+(("2"*"3")+"-2")+("11"%"3")&"2",,82, 0
+
+;error if unquoted assign is part of an invalid expression
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+^value = Invalid nonvariable assignment & (value1=anything),,,-1
+"^val"&("ue")= invalid assignement,,,-1
+^val &("ue")= invalid assignement,,,-1
+^val&("ue")= invalid assignement,,,-1
+^val&(ue)= invalid assignement,,,-1
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+^value = 4422 &(^value=(4&4)&22),,44224422, 0
+^value = 4422 &("=(4&4)&22"),,4422=(4&4)&22, 0
+^value = ^value1 = ^value2 = 4422 &("=(4&4)&22"),,4422=(4&4)&22, 0
+
+ ^value = "A" & ^value,,A4422=(4&4)&22, 0
+^value1 = "B" & ^VALUE1,,B4422=(4&4)&22, 0
+^value2 = "C" & ^Value2,,C4422=(4&4)&22, 0
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+^Value = 2,,2,0
+^Value = 2 & 2,,22,0
+^Value,,22,0
+^value=(4&(4))& ^value,,4422, 0
+^value,,4422, 0
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+^Value = "2",,2,0
+^Value = "2" & "2",,22,0
+^Value,,22,0
+^value=("4"&("4"))& ^value,,4422, 0
+^value,,4422, 0
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+The number is & ^value,,The number is4422, 0
+"The number is " & ^value,,The number is 4422, 0
+"The number is " & "^value",,The number is ^value, 0
+
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"""Nothing"""&("""Complicated""")&"More Less Complicated", ,"Nothing""Complicated"More Less Complicated, 0
+
+;problem with # of quotes around "Complicated". Should be treated like 2 emptry strings?
+"""Nothing"""&(""Complicated"")&"More Less Complicated", ,"Nothing"ComplicatedMore Less Complicated, 0
+
+;-1 error in grouping. No matching parenthesis since it is quoted.
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"""Nothing"""&("""Complicated"")&"More Less Complicated",value not changed,value not changed, -1
+"""Nothing""&(""Complicated")&"More Less Complicated",value not changed,value not changed, -1
+
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+Now &( 2 &( groups )& with no quotes)&.,,Now2groupswith no quotes., 0
+
+;note odd quoted strings due to lack of operators
+Now ( 2 ( groups ) with no quotes).,,Now "2 "groups" with no quotes"., 0
+
+;with the operators everything works as expected
+"Now "&("2"&( "2" &" group"& "s")& " with quotes")& ".",,Now 22 groups with quotes., 0
+"Now "&("2"&("2"&" group"&"s")&" with quotes")&".",,Now 22 groups with quotes., 0
+"Now "& ( 2 & ( 2 & " group" & "s" ) & " with quotes" ) & ".",,Now 22 groups with quotes., 0
+
+;note odd quoted strings due to lack of operators
+;this is because we don't trim the quotes if we don't process with an operator
+;when we are inside a reentrant routine
+"Now " ( "2" ( " groups" ) " with quotes" ) ".",,Now " "2" " groups" " with quotes" "., 0
+
+;what happens if we don't have these extra spaces?
+;will the quotes get doubled up and extracted? I suppose they would.
+"Now "("2"(" groups")" with quotes")".",,Now "2" groups" with quotes"., 0
+
+
+;now what about with NO operators?
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"nothing complicated", ,nothing complicated, 0
+nothing complicated, ,nothing complicated, 0
+
+;(N1) perhaps this next should be an error condition?
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"nothing" "complicated", ,nothing" "complicated, 0
+"nothing" complicated", ,nothing" complicated, 0
+
+;this is as expected
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"nothing""complicated", ,nothing"complicated, 0
+
+;perhaps this should show the embedded quotes, too, like (N1) above?
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+;""nothing complicated"",,"nothing complicated", 0
+""nothing complicated"",,nothing complicated, 0
+;""101"",,"101", 0
+""101"",,101, 0
+
+;this is as expected
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"""nothing complicated""",,"nothing complicated", 0
+"""101""",,"101", 0
+
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+"Nothing" & "Complicated", ,NothingComplicated, 0
+"Nothing"&"Complicated", ,NothingComplicated, 0
+"""Nothing"""&"""Complicated""", ,"Nothing""Complicated", 0
+"""Nothing"""&"""Complicated"""&More Less Complicated, ,"Nothing""Complicated"More Less Complicated, 0
+"""Nothing"""&"""Complicated"""&"More Less Complicated", ,"Nothing""Complicated"More Less Complicated, 0
+
+;expressionIn, valueIn, benchStr, benchInt
+;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+^YFN="Mr.",,Mr., 0
+^YLN="Wang",,Wang, 0
+^YFN,,Mr.,0
+^YLN,,Wang,0
+(^PFN="Mr."),,Mr., 0
+(^PLN="Wang"),,Wang, 0
+^PFN,,Mr.,0
+^PLN,,Wang,0
+"A " & (^AFN="Mr."),,A Mr., 0
+"A " & (^ALN="Wang"),,A Wang, 0
+^AFN,,Mr.,0
+^ALN,,Wang,0
+"The author " & (^FN="Carl") & " " & (^LN="Nagle") & ".",,The author Carl Nagle., 0
+^FN,,Carl, 0
+^LN,,Nagle, 0
+"Again " & ^FN & " " & ^LN & ".",,Again Carl Nagle., 0

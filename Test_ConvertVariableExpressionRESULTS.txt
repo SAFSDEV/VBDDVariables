@@ -1,0 +1,426 @@
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:2 + 2:
+     BENCHSTR:4:
+ OK :ACTULSTR:4:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:-2-2:
+     BENCHSTR:-4:
+ OK :ACTULSTR:-4:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:2+2*3-2&2:
+     BENCHSTR:62:
+ OK :ACTULSTR:62:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:2+2*3-2+11%3&2:
+     BENCHSTR:42:
+ OK :ACTULSTR:42:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:2+((2*3)-2)+(11%3)&2:
+     BENCHSTR:82:
+ OK :ACTULSTR:82:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"2"+(("2"*"3")+"-2")+("11"%"3")&"2":
+     BENCHSTR:82:
+ OK :ACTULSTR:82:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value = Invalid nonvariable assignment & (value1=anything):
+     BENCHSTR::
+ OK :ACTULSTR::
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"^val"&("ue")= invalid assignement:
+     BENCHSTR::
+ OK :ACTULSTR::
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^val &("ue")= invalid assignement:
+     BENCHSTR::
+ OK :ACTULSTR::
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^val&("ue")= invalid assignement:
+     BENCHSTR::
+ OK :ACTULSTR::
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^val&(ue)= invalid assignement:
+     BENCHSTR::
+ OK :ACTULSTR::
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value = 4422 &(^value=(4&4)&22):
+     BENCHSTR:44224422:
+ OK :ACTULSTR:44224422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value = 4422 &("=(4&4)&22"):
+     BENCHSTR:4422=(4&4)&22:
+ OK :ACTULSTR:4422=(4&4)&22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value = ^value1 = ^value2 = 4422 &("=(4&4)&22"):
+     BENCHSTR:4422=(4&4)&22:
+ OK :ACTULSTR:4422=(4&4)&22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: ^value = "A" & ^value:
+     BENCHSTR:A4422=(4&4)&22:
+ OK :ACTULSTR:A4422=(4&4)&22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value1 = "B" & ^VALUE1:
+     BENCHSTR:B4422=(4&4)&22:
+ OK :ACTULSTR:B4422=(4&4)&22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value2 = "C" & ^Value2:
+     BENCHSTR:C4422=(4&4)&22:
+ OK :ACTULSTR:C4422=(4&4)&22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^Value = 2:
+     BENCHSTR:2:
+ OK :ACTULSTR:2:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^Value = 2 & 2:
+     BENCHSTR:22:
+ OK :ACTULSTR:22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^Value:
+     BENCHSTR:22:
+ OK :ACTULSTR:22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value=(4&(4))& ^value:
+     BENCHSTR:4422:
+ OK :ACTULSTR:4422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value:
+     BENCHSTR:4422:
+ OK :ACTULSTR:4422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^Value = "2":
+     BENCHSTR:2:
+ OK :ACTULSTR:2:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^Value = "2" & "2":
+     BENCHSTR:22:
+ OK :ACTULSTR:22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^Value:
+     BENCHSTR:22:
+ OK :ACTULSTR:22:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value=("4"&("4"))& ^value:
+     BENCHSTR:4422:
+ OK :ACTULSTR:4422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^value:
+     BENCHSTR:4422:
+ OK :ACTULSTR:4422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:The number is & ^value:
+     BENCHSTR:The number is4422:
+ OK :ACTULSTR:The number is4422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"The number is " & ^value:
+     BENCHSTR:The number is 4422:
+ OK :ACTULSTR:The number is 4422:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"The number is " & "^value":
+     BENCHSTR:The number is ^value:
+ OK :ACTULSTR:The number is ^value:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing"""&("""Complicated""")&"More Less Complicated":
+     BENCHSTR:"Nothing""Complicated"More Less Complicated:
+ OK :ACTULSTR:"Nothing""Complicated"More Less Complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing"""&(""Complicated"")&"More Less Complicated":
+     BENCHSTR:"Nothing"ComplicatedMore Less Complicated:
+ OK :ACTULSTR:"Nothing"ComplicatedMore Less Complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing"""&("""Complicated"")&"More Less Complicated":
+     BENCHSTR:value not changed:
+ OK :ACTULSTR:value not changed:
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing""&(""Complicated")&"More Less Complicated":
+     BENCHSTR:value not changed:
+ OK :ACTULSTR:value not changed:
+     BENCHINT:-1
+ OK :ACTULINT:-1
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:Now &( 2 &( groups )& with no quotes)&.:
+     BENCHSTR:Now2groupswith no quotes.:
+ OK :ACTULSTR:Now2groupswith no quotes.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:Now ( 2 ( groups ) with no quotes).:
+     BENCHSTR:Now "2 "groups" with no quotes".:
+ OK :ACTULSTR:Now "2 "groups" with no quotes".:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Now "&("2"&( "2" &" group"& "s")& " with quotes")& ".":
+     BENCHSTR:Now 22 groups with quotes.:
+ OK :ACTULSTR:Now 22 groups with quotes.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Now "&("2"&("2"&" group"&"s")&" with quotes")&".":
+     BENCHSTR:Now 22 groups with quotes.:
+ OK :ACTULSTR:Now 22 groups with quotes.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Now "& ( 2 & ( 2 & " group" & "s" ) & " with quotes" ) & ".":
+     BENCHSTR:Now 22 groups with quotes.:
+ OK :ACTULSTR:Now 22 groups with quotes.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Now " ( "2" ( " groups" ) " with quotes" ) ".":
+     BENCHSTR:Now " "2" " groups" " with quotes" ".:
+ OK :ACTULSTR:Now " "2" " groups" " with quotes" ".:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Now "("2"(" groups")" with quotes")".":
+     BENCHSTR:Now "2" groups" with quotes".:
+ OK :ACTULSTR:Now "2" groups" with quotes".:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"nothing complicated":
+     BENCHSTR:nothing complicated:
+ OK :ACTULSTR:nothing complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:nothing complicated:
+     BENCHSTR:nothing complicated:
+ OK :ACTULSTR:nothing complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"nothing" "complicated":
+     BENCHSTR:nothing" "complicated:
+ OK :ACTULSTR:nothing" "complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"nothing" complicated":
+     BENCHSTR:nothing" complicated:
+ OK :ACTULSTR:nothing" complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"nothing""complicated":
+     BENCHSTR:nothing"complicated:
+ OK :ACTULSTR:nothing"complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:""nothing complicated"":
+     BENCHSTR:nothing complicated:
+ OK :ACTULSTR:nothing complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:""101"":
+     BENCHSTR:101:
+ OK :ACTULSTR:101:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""nothing complicated""":
+     BENCHSTR:"nothing complicated":
+ OK :ACTULSTR:"nothing complicated":
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""101""":
+     BENCHSTR:"101":
+ OK :ACTULSTR:"101":
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Nothing" & "Complicated":
+     BENCHSTR:NothingComplicated:
+ OK :ACTULSTR:NothingComplicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Nothing"&"Complicated":
+     BENCHSTR:NothingComplicated:
+ OK :ACTULSTR:NothingComplicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing"""&"""Complicated""":
+     BENCHSTR:"Nothing""Complicated":
+ OK :ACTULSTR:"Nothing""Complicated":
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing"""&"""Complicated"""&More Less Complicated:
+     BENCHSTR:"Nothing""Complicated"More Less Complicated:
+ OK :ACTULSTR:"Nothing""Complicated"More Less Complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"""Nothing"""&"""Complicated"""&"More Less Complicated":
+     BENCHSTR:"Nothing""Complicated"More Less Complicated:
+ OK :ACTULSTR:"Nothing""Complicated"More Less Complicated:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^YFN="Mr.":
+     BENCHSTR:Mr.:
+ OK :ACTULSTR:Mr.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^YLN="Wang":
+     BENCHSTR:Wang:
+ OK :ACTULSTR:Wang:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^YFN:
+     BENCHSTR:Mr.:
+ OK :ACTULSTR:Mr.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^YLN:
+     BENCHSTR:Wang:
+ OK :ACTULSTR:Wang:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:(^PFN="Mr."):
+     BENCHSTR:Mr.:
+ OK :ACTULSTR:Mr.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:(^PLN="Wang"):
+     BENCHSTR:Wang:
+ OK :ACTULSTR:Wang:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^PFN:
+     BENCHSTR:Mr.:
+ OK :ACTULSTR:Mr.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^PLN:
+     BENCHSTR:Wang:
+ OK :ACTULSTR:Wang:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"A " & (^AFN="Mr."):
+     BENCHSTR:A Mr.:
+ OK :ACTULSTR:A Mr.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"A " & (^ALN="Wang"):
+     BENCHSTR:A Wang:
+ OK :ACTULSTR:A Wang:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^AFN:
+     BENCHSTR:Mr.:
+ OK :ACTULSTR:Mr.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^ALN:
+     BENCHSTR:Wang:
+ OK :ACTULSTR:Wang:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"The author " & (^FN="Carl") & " " & (^LN="Nagle") & ".":
+     BENCHSTR:The author Carl Nagle.:
+ OK :ACTULSTR:The author Carl Nagle.:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^FN:
+     BENCHSTR:Carl:
+ OK :ACTULSTR:Carl:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:^LN:
+     BENCHSTR:Nagle:
+ OK :ACTULSTR:Nagle:
+     BENCHINT: 0
+ OK :ACTULINT: 0
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:"Again " & ^FN & " " & ^LN & ".":
+     BENCHSTR:Again Carl Nagle.:
+ OK :ACTULSTR:Again Carl Nagle.:
+     BENCHINT: 0
+ OK :ACTULINT: 0

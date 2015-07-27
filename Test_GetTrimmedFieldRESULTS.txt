@@ -1,0 +1,102 @@
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 1
+     DELIM:;
+     FIELD: 1
+     BENCH:some
+ OK :RTURN:some
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 7
+     DELIM:!;
+     FIELD: 1
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 8
+     DELIM:;!
+     FIELD: 2
+     BENCH:data
+ OK :RTURN:data
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 15
+     DELIM:*;#
+     FIELD: 2
+     BENCH:data
+ OK :RTURN:data
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 22
+     DELIM:;
+     FIELD: 1
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data ;;strings;:INDEX: 17
+     DELIM:;
+     FIELD: 2
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data ;;strings;:INDEX: 17
+     DELIM:;
+     FIELD: 3
+     BENCH:strings
+ OK :RTURN:strings
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data ;;strings;:INDEX: 1
+     DELIM:;
+     FIELD: 3
+     BENCH:data
+ OK :RTURN:data
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data ;;strings;:INDEX: 1
+     DELIM:;
+     FIELD: 4
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data ;;strings;:INDEX: 1
+     DELIM:;
+     FIELD: 5
+     BENCH:strings
+ OK :RTURN:strings
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:! some ! sample ! data :INDEX: 1
+     DELIM:!
+     FIELD: 4
+     BENCH:data
+ OK :RTURN:data
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:! some ! sample ! data !:INDEX: 1
+     DELIM:!
+     FIELD: 5
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:!:INDEX: 1
+     DELIM:!
+     FIELD: 1
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT:! :INDEX: 1
+     DELIM:!
+     FIELD: 2
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 15
+     DELIM:
+     FIELD: 1
+     BENCH:; data
+ OK :RTURN:; data
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT: some ; sample ; data :INDEX: 15
+     DELIM:
+     FIELD: 2
+     BENCH:
+ OK :RTURN:
+           ;=== ====1==== ====2==== ====3==== ====4==== ====5==== ====6==== ====7==== ====8
+     INPUT::INDEX: 1
+     DELIM:;
+     FIELD: 1
+     BENCH:
+ OK :RTURN:
